@@ -101,7 +101,7 @@ public class BGARefreshScrollingUtil {
                 StaggeredGridLayoutManager layoutManager = (StaggeredGridLayoutManager) manager;
 
                 int[] out = layoutManager.findFirstCompletelyVisibleItemPositions(null);
-                if (out[0] < 1) {
+                if (out[0] < 1 && !recyclerView.canScrollVertically(-1)) {
                     return true;
                 }
             }
